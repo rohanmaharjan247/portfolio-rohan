@@ -1,0 +1,19 @@
+.profile_card {
+  @apply bg-white rounded shadow;
+}
+
+.profile_title {
+  @apply uppercase font-bold tracking-tight;
+}
+
+.profile_sub_title {
+  @apply text-sm text-slate-400;
+}
+
+.profile_image {
+  @apply relative w-full h-64;
+}
+
+.profile_image .profile_icon {
+  @apply absolute px-3 py-2 rounded-full -bottom-5 left-4 primary-color;
+}

@@ -1,0 +1,32 @@
+.nav_link {
+  @apply flex gap-8 uppercase font-bold text-sm;
+}
+
+.social_icons {
+  @apply flex gap-4 items-center;
+}
+
+.social_icons__list {
+  @apply flex gap-4;
+}
+
+.nav_link li,
+.social_icons__list li {
+  @apply transition-colors hover:text-primary-300;
+}
+
+.nav_icon {
+  @apply primary-color p-6 rounded-l;
+}
+
+.nav_list {
+  @apply flex items-center gap-4;
+}
+
+.navbar {
+  @apply flex justify-between items-center pr-4;
+}
+
+.nav {
+  @apply bg-white rounded;
+}
