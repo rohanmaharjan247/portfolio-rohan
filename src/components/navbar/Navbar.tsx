@@ -25,9 +25,6 @@ const Navbar = () => {
             <li>
               <Link href={'/portfolio'}>Portfolio</Link>
             </li>
-            <li>
-              <Link href={'/'}>Contact</Link>
-            </li>
           </ul>
         </div>
         <div className={styles.social_icons}>
