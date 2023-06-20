@@ -11,7 +11,7 @@
 }
 
 .profile_image {
-  @apply relative w-full h-64;
+  @apply relative;
 }
 
 .profile_image .profile_icon {

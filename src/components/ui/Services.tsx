@@ -1,14 +1,14 @@
-import { ServiceProps } from '@/helpers/props';
+import { ServiceProps } from "@/helpers/props";
 import {
   IconDefinition,
   IconLookup,
   IconName,
   findIconDefinition,
-} from '@fortawesome/fontawesome-svg-core';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+} from "@fortawesome/fontawesome-svg-core";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const getIcon = (iconName: IconName) => {
-  const iconLookup: IconLookup = { prefix: 'fas', iconName };
+  const iconLookup: IconLookup = { prefix: "fas", iconName };
   const iconDefinition: IconDefinition = findIconDefinition(iconLookup);
 
   return iconDefinition;
@@ -16,11 +16,11 @@ const getIcon = (iconName: IconName) => {
 
 const Services = ({ service }: ServiceProps) => {
   return (
-    <div className="card px-4 w-64 max-w-sm my-8">
+    <div className="card px-4 py-8 w-64 max-w-sm my-8">
       <FontAwesomeIcon
         icon={getIcon(
           (service?.fields?.iconName?.toString() as IconName) ??
-            'exclamation-square'
+            "exclamation-square"
         )}
         size="2xl"
       />

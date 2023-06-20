@@ -1,16 +1,17 @@
-import { useEffect, useState } from 'react';
-import { getEntryBy } from '../../../lib/helpers';
+import { useEffect, useState } from "react";
+import { getEntryBy } from "../../../lib/helpers";
 import {
   TypePersonalInfo,
   TypePersonalInfoList,
   TypePersonalInfoSkeleton,
-} from '@/types/contentfulv10';
-import { Asset } from 'contentful';
-import Image from 'next/image';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faDownload, faGlasses } from '@fortawesome/free-solid-svg-icons';
-import { Button } from '../ui';
-import styles from './ProfileInfo.module.css';
+} from "@/types/contentfulv10";
+import { Asset } from "contentful";
+import Image from "next/image";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faDownload, faGlasses } from "@fortawesome/free-solid-svg-icons";
+import { Button } from "../ui";
+import styles from "./ProfileInfo.module.css";
+import LazyImage from "../ui/LazyImage";
 
 const ProfileInfo = () => {
   const [profileInfo, setProfileInfo] = useState<TypePersonalInfo>();
@@ -19,7 +20,7 @@ const ProfileInfo = () => {
 
   const getProfileInfo = async () => {
     const profile = await getEntryBy<TypePersonalInfoSkeleton>(
-      '3ZkUbDrkygOqV4ZX0pTwsP'
+      "3ZkUbDrkygOqV4ZX0pTwsP"
     );
 
     const list = profile?.fields?.subList as TypePersonalInfoList[];
@@ -49,10 +50,10 @@ const ProfileInfo = () => {
       </div>
       <div className={styles.profile_image}>
         {profilePic && (
-          <Image
+          <LazyImage
             src={profilePic}
-            alt={profileInfo?.fields?.fullName?.toString() ?? ''}
-            fill
+            alt={profileInfo?.fields?.fullName?.toString()}
+            classes="h-full"
           />
         )}
         <div className={styles.profile_icon}>
